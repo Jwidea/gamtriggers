@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder FFXIVJobFilterEnabled="True" FFXIVJobFilter="4194304" Id="37fe5359-560c-4953-bcef-afd25a142022" Name="吟游诗人" Enabled="true">
+    <Folders />
+    <Triggers>
+      <Trigger Enabled="true" Name="伶牙俐齿" Id="01a23c75-bc31-4202-8b64-7fdf772e7717" RegularExpression="^.{15}StatusAdd 1A:[0-9A-F]{2}([0-9A-F])?:(?&lt;dot&gt;Stormbite):(?&lt;duration&gt;\d{1,3}.?(\d{1,2})?):[0-9A-F]{8}:(?&lt;caster&gt;.+?):" DebugLevel="Verbose" PrevActions="Interrupt">
+        <Actions>
+          <Action OrderNumber="1" UseTTSTextExpression="上毒上毒，dot要断了" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="40000">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+        </Actions>
+        <Condition Enabled="true" Grouping="Or">
+          <ConditionSingle Enabled="true" ExpressionL="${caster}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+        </Condition>
+        <Conditions />
+      </Trigger>
+      <Trigger Enabled="true" Name="战斗之声" Id="616a262a-bfa4-4518-9708-7f3bffcaf242" RegularExpression="^.{15}StatusAdd 1A:[0-9A-F]{2}([0-9A-F])?:(?&lt;buff&gt;Battle Voice):(?&lt;duration&gt;\d{1,3}.?(\d{1,2})?):[0-9A-F]{8}:(?&lt;caster&gt;.+?):" DebugLevel="Verbose" PrevActions="Interrupt">
+        <Actions>
+          <Action OrderNumber="1" UseTTSTextExpression="刷新毒" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="10000">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+        </Actions>
+        <Condition Enabled="true" Grouping="Or">
+          <ConditionSingle Enabled="true" ExpressionL="${caster}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+        </Condition>
+        <Conditions />
+      </Trigger>
+      <Trigger Enabled="true" Name="贤者歌" Id="2001aac9-da0a-435e-9554-592dd24ef9ed" RegularExpression="^.{15}ActionEffect 15:10653B75:(?&lt;caster&gt;.+?):72:Mage's Ballad:" DebugLevel="Verbose" PrevActions="Interrupt">
+        <Actions>
+          <Action OrderNumber="1" UseTTSTextExpression="准备切歌" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="25000">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+        </Actions>
+        <Condition Enabled="true" Grouping="Or">
+          <ConditionSingle Enabled="true" ExpressionL="${caster}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+        </Condition>
+        <Conditions />
+      </Trigger>
+      <Trigger Enabled="true" Name="绝峰箭" Id="65aa8829-53ed-49c7-a5b5-14379cc3bbe4" RegularExpression="^.{15}ActionEffect 15:10653B75:(?&lt;caster&gt;.+?):4070:Apex Arrow:" DebugLevel="Verbose" PrevActions="Interrupt">
+        <Actions>
+          <Action OrderNumber="1" UseTTSTextExpression="apex发射" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="60000">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+        </Actions>
+        <Condition Enabled="true" Grouping="Or">
+          <ConditionSingle Enabled="true" ExpressionL="${caster}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+        </Condition>
+        <Conditions />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>
