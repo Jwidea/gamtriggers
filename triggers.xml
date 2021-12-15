@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="74e43af1-244c-427c-b344-f663fe6d902e" Name="GAM触发器" Enabled="true">
+    <Folders>
+      <Folder Id="45701744-1490-445d-9ee3-1c1e752be98e" Name="白魔" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="DOT" Id="ff381c3c-a77e-4656-995c-f6d209e1716f" RegularExpression="StatusAdd 1A:74F:Dia:30.00:[0-9A-F]{8}:(?&lt;name&gt;[^:]+)">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="Recast Dot" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="27000">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder Id="d5edcfe0-ff6a-4af1-8244-0aaf222d437a" Name="占星" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="DOT" Id="4e7a03b2-5d3b-4d86-bb12-3ec63e44f086" RegularExpression="StatusAdd 1A:759:Combust III:30.00:[0-9A-F]{8}:(?&lt;name&gt;[^:]+)">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="Recast Dot" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="27000">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+    </Folders>
+    <Triggers />
+  </ExportedFolder>
+</TriggernometryExport>
